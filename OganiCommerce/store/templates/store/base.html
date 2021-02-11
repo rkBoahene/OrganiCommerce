@@ -58,13 +58,7 @@
     />
   </head>
   <body>
-    <!-- Page Preloder -->
     {% comment %}
-    <div id="preloder">
-      <div class="loader"></div>
-    </div>
-    {% endcomment %}
-    <!-- Humberger Begin -->
     <div class="humberger__menu__overlay"></div>
     <div class="humberger__menu__wrapper">
       <div class="humberger__menu__logo">
@@ -116,8 +110,9 @@
         </ul>
       </div>
     </div>
+    {% endcomment %}
     <!-- Humberger End -->
-    {% include 'store/header.html' %} {% block content %}{% endblock content%}
-    {%include 'store/footer.html' %}
+    {% include 'store/header.html' %} {% include 'store/home/menu.html' %}
+    {%block content %} {% endblock %} {%include 'store/footer.html' %}
   </body>
 </html>
