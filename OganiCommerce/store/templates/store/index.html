@@ -1,2 +1,21 @@
-{% extends 'store/base.html' %} {% block content %} {%include
-'store/sections/categories.html' %} {% endblock content %}
+{% extends 'store/base.html' %} {% load static %}{% block content %}
+<!-- Hero Section Begin -->
+{% include 'store/sections/hero.html' %}
+
+<!-- Hero Section End -->
+<!-- Categories Section Begin -->
+{% comment %} {% include 'store/sections/categories.html' %} {% endcomment %}
+<!-- Categories Section End -->
+
+<!-- Banner Begin -->
+{% include 'store/sections/banner.html' %}
+<!-- Banner End -->
+
+<!-- Featured Section Begin -->
+{% comment %} {% include 'store/sections/featured.html' %} {% endcomment %}
+<!-- Featured Section End -->
+
+<!-- Latest Product Section Begin -->
+{% include 'store/sections/latest.html' %}
+<!-- Latest Product Section End -->
+{% endblock content %}
