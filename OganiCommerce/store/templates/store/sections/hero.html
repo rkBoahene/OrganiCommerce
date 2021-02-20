@@ -1,3 +1,4 @@
+{% load static %}
 <!-- Hero Section Begin -->
 <section class="hero">
   <div class="container">
@@ -6,21 +7,13 @@
         <div class="hero__categories">
           <div class="hero__categories__all">
             <i class="fa fa-bars"></i>
-            <span>All departments</span>
+            <span>All Categories</span>
           </div>
+          {% for category in categories %}
           <ul>
-            <li><a href="#">Fresh Meat</a></li>
-            <li><a href="#">Vegetables</a></li>
-            <li><a href="#">Fruit & Nut Gifts</a></li>
-            <li><a href="#">Fresh Berries</a></li>
-            <li><a href="#">Ocean Foods</a></li>
-            <li><a href="#">Butter & Eggs</a></li>
-            <li><a href="#">Fastfood</a></li>
-            <li><a href="#">Fresh Onion</a></li>
-            <li><a href="#">Papayaya & Crisps</a></li>
-            <li><a href="#">Oatmeal</a></li>
-            <li><a href="#">Fresh Bananas</a></li>
+            <li><a href="#">{{ category.name}}</a></li>
           </ul>
+          {% endfor %}
         </div>
       </div>
       <div class="col-lg-9">
@@ -45,7 +38,10 @@
             </div>
           </div>
         </div>
-        <div class="hero__item set-bg" data-setbg="img/hero/banner.jpg">
+        <div
+          class="hero__item set-bg"
+          data-setbg="{% static 'img/hero/banner.jpg' %}"
+        >
           <div class="hero__text">
             <span>FRUIT FRESH</span>
             <h2>Vegetable <br />100% Organic</h2>
@@ -57,4 +53,5 @@
     </div>
   </div>
 </section>
+
 <!-- Hero Section End -->
