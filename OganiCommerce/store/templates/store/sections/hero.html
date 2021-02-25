@@ -9,9 +9,11 @@
             <i class="fa fa-bars"></i>
             <span>All Categories</span>
           </div>
-          {% for category in categories %}
+          {% for c in categories %}
           <ul>
-            <li><a href="#">{{ category.name}}</a></li>
+            <li {% if category.slug == c.slug %} class='selected' {% endif %}>
+              <a href="{{ c.get_absolute_url }}">{{ c.name}}</a>
+            </li>
           </ul>
           {% endfor %}
         </div>
@@ -38,17 +40,15 @@
             </div>
           </div>
         </div>
-        <div
-          class="hero__item set-bg"
-          data-setbg="{% static 'img/hero/banner.jpg' %}"
-        >
+        {% comment %} <div class="hero__item set-bg"
+          data-setbg="{% static 'img/hero/banner.jpg' %}">
           <div class="hero__text">
             <span>FRUIT FRESH</span>
             <h2>Vegetable <br />100% Organic</h2>
             <p>Free Pickup and Delivery Available</p>
             <a href="#" class="primary-btn">SHOP NOW</a>
           </div>
-        </div>
+        </div> {% endcomment %}
       </div>
     </div>
   </div>
