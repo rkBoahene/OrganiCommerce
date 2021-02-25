@@ -7,7 +7,7 @@
     <meta name="keywords" content="Ogani, unica, creative, html" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Ogani | Template</title>
+    <title>{% block title %}Ogani | Template{% endblock title %}</title>
 
     <!-- Google Font -->
     <link
@@ -57,6 +57,7 @@
       type="text/css"
     />
   </head>
+
   <body>
     {% include 'store/partials/header.html' %} {% block content %}{%endblock %}
     {%include 'store/partials/footer.html' %}
