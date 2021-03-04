@@ -1,2 +1,18 @@
-{% extends '../base.html' %}{ % load static %} {% block content %}
-{{categories}} {% endblock%}
+{% extends '../base.html' %}{% load static %} {% block title %} Categories
+{%endblock title %} {% block content %}
+<!-- Breadcrumb Begin -->
+{% include 'store/sections/breadcrumb.html' %}
+<!-- Breadcrumb End -->
+<!-- Product Section Begin -->
+<section class="product spad">
+  <div class="container">
+    <div class="row">
+      {% include 'store/sections/side-filter.html'%}
+      <!-- no need for this comment-->
+      {% include 'store/sections/products.html' %}
+    </div>
+  </div>
+</section>
+<!-- Product Section End -->
+
+{% endblock%}
