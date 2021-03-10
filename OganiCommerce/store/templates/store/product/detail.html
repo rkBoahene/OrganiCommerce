@@ -10,7 +10,9 @@
           <h2>{{ product.name }}</h2>
           <div class="breadcrumb__option">
             <a href="#">Home</a>
-            <a href="#">{{product.category}}</a>
+            <a href="{{product.category.get_absolute_url}}"
+              >{{product.category}}</a
+            >
             <span>{{ product.name }}</span>
           </div>
         </div>
