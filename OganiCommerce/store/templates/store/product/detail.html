@@ -71,6 +71,12 @@
           </div>
           <div class="product__details__price">${{ product.price }}</div>
           <p>{{ product.description }}</p>
+          {% comment %} add to cart form {% endcomment %}
+          <form action="{% url 'cart:cart_add' product.id %}" method="post">
+            {{ cart_product_form }} {% csrf_token %}
+            <input type="submit" value="Add to cart" />
+          </form>
+          {% comment %}
           <div class="product__details__quantity">
             <div class="quantity">
               <div class="pro-qty">
@@ -82,6 +88,7 @@
           <a href="#" class="heart-icon"
             ><span class="icon_heart_alt"></span
           ></a>
+          {% endcomment %}
           <ul>
             <li><b>Availability</b> <span>{{ product.available }}</span></li>
             {% comment %}
