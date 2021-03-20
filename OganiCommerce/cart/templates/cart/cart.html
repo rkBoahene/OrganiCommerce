@@ -112,7 +112,9 @@
             <li>Subtotal <span>${{ cart.get_total_price }}</span></li>
             <li>Total <span>${{ cart.get_total_price }}</span></li>
           </ul>
-          <a href="#" class="primary-btn">PROCEED TO CHECKOUT</a>
+          <a href="{% url 'orders:order_create' %}" class="primary-btn"
+            >PROCEED TO CHECKOUT</a
+          >
         </div>
       </div>
     </div>
