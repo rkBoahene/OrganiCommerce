@@ -5,5 +5,6 @@ from . import views
 app_name = 'users'
 urlpatterns = [
     url('accounts/', include('django.contrib.auth.urls')),
-    url('dashboard/', views.dashboard, name='dashboard')
+    url('dashboard/', views.dashboard, name='dashboard'),
+    url('register/', views.register, name='register')
 ]
