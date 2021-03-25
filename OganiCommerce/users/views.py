@@ -40,8 +40,10 @@ def register(request):
             new_user = user_form.save(commit=False)
             new_user.set_password(user_form.cleaned_data['password'])
             new_user.save()
-            login(request, new_user)
+            # login(request, new_user)
             return render(request, 'users/register_done.html', {'new_user': new_user})
+        else:
+            return HttpResponse('Invalid credentials')
     else:
         user_form = UserRegistrationtionForm()
         return render(request, "users/register.html", {"user_form": user_form})

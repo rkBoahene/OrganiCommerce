@@ -1,7 +1,7 @@
 from django.conf.urls import url
 from django.contrib.auth import views as auth_views
 from . import views
-from store.views import product_list
+
 
 app_name = 'users'
 urlpatterns = [
