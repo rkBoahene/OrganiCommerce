@@ -122,7 +122,7 @@ CART_SESSION_ID = 'cart'
 
 LOGIN_REDIRECT_URL = 'store:product_list'
 LOGIN_URL = 'login'
-LOGOUT_URL = 'store:product_list'
+LOGOUT_REDIRECT_URL = 'store:product_list'
 
 # EMAIL_HOST = "smtp.mailgun.org"
 # EMAIL_PORT = 587

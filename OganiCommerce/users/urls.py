@@ -8,6 +8,5 @@ urlpatterns = [
     # url('login/', views.user_login, name='login'),
     url('login/', auth_views.LoginView.as_view(), name='login'),
     url('logout/', auth_views.LogoutView.as_view(), name='logout'),
-    # url('', product_list, name='dashboard'),
     url('register/', views.register, name='register')
 ]

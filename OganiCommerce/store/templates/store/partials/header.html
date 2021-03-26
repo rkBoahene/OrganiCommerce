@@ -62,20 +62,13 @@
           <div class="header__top__left">
             <ul>
               {% comment %}
-              <li><i class="fa fa-envelope"></i> hello@colorlib.com</li>
-              {% endcomment %}
               <li>Free Shipping for all Order of $99</li>
+              {% endcomment %}
             </ul>
           </div>
         </div>
         <div class="col-lg-6 col-md-6">
           <div class="header__top__right">
-            <div class="header__top__right__social">
-              <a href="#"><i class="fa fa-facebook"></i></a>
-              <a href="#"><i class="fa fa-twitter"></i></a>
-              <a href="#"><i class="fa fa-linkedin"></i></a>
-              <a href="#"><i class="fa fa-pinterest-p"></i></a>
-            </div>
             <div class="header__top__right__language">
               <img src="{% static 'img/language.png' %}" alt="" />
               <div>English</div>
@@ -102,19 +95,6 @@
               >
               {% endif %}
             </div>
-            {% comment %}
-            <div class="header__top__right__auth">
-              {% if request.user.is_authenticated %}
-              <a href="{% url 'users:login' %}"
-                ><i class="fa fa-user"></i> Hello {{request.user.username}}</a
-              >
-              {% else %}
-              <a href="{% url 'users:login' %}"
-                ><i class="fa fa-user"></i> Login</a
-              >
-              {% endif %}
-            </div>
-            {% endcomment %}
           </div>
         </div>
       </div>
