@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Ogani Template" />
+    <meta name="keywords" content="Ogani, unica, creative, html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>{% block title %}Ogani | Login{% endblock title %}</title>
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200;300;400;600;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="{% static 'css/bootstrap.min.css' %}"
+      type="text/css"
+    />
+
+    <!-- Css Styles -->
+
+    <link
+      rel="stylesheet"
+      href="{% static 'css/style.css' %}"
+      type="text/css"
+    />
+  </head>
+
+  <body class="text-center">
+    {% comment %}
+    <header class="header">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-3">
+            <div class="header__logo">
+              <a href="{% url 'store:product_list' %}"
+                ><img src="{% static 'img/logo.png' %}" alt=""
+              /></a>
+            </div>
+          </div>
+          <div class="col-lg-6"></div>
+          <div class="col-lg-3"></div>
+        </div>
+      </div>
+    </header>
+    {% endcomment %} {% block content %}{% endblock content %}
+  </body>
+</html>

@@ -16,11 +16,3 @@ class OrderCreateForm(forms.ModelForm):
         'postal_code': forms.CharField(max_length=30, widget=forms.TextInput(attrs={"class": "checkout__input"})),
         'city': forms.CharField(max_length=100, widget=forms.TextInput(attrs={"class": "checkout__input"})),
     }
-
-# first_name = forms.CharField(max_length=50)
-    # last_name = forms.CharField(max_length=50)
-    # phone = forms.CharField(max_length=15)
-    # email = forms.EmailField()
-    # address = forms.CharField(max_length=250)
-    # postal_code = forms.CharField(max_length=30)
-    # city = forms.CharField(max_length=100)
