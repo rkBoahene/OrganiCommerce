@@ -1,0 +1,16 @@
+{% extends '../base.html' %}{% load static %} {% block title %} Categories
+{%endblock title %} {% block content %}
+
+<!-- Product Section Begin -->
+<section class="product spad">
+  <div class="container">
+    <div class="row">
+      {% include 'store/sections/side-filter.html'%}
+      <!-- no need for this comment-->
+      {% include 'store/sections/search_results.html' %}
+    </div>
+  </div>
+</section>
+<!-- Product Section End -->
+
+{% endblock%}
