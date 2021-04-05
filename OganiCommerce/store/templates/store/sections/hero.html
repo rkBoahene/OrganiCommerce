@@ -21,7 +21,7 @@
       <div class="col-lg-9">
         <div class="hero__search">
           <div class="hero__search__form">
-            <form action="{% url 'store:product_search' query %}" method="GET">
+            <form action="{% url 'search:product_search' %}" method="GET">
              
                 <span class="fa fa-search"></span>
               <input name="query" type="text" placeholder="What are you looking for?" />

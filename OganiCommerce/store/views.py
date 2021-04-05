@@ -2,7 +2,7 @@ from django.shortcuts import render, get_object_or_404
 from django.contrib.postgres.search import SearchVector
 from .models import Category, Product
 from cart.forms import CartAddProductForm
-from .forms import SearchForm
+
 # Create your views here.
 
 
@@ -23,18 +23,6 @@ def product_detail(request, id, slug):
     cart_product_form = CartAddProductForm()
     return render(request, 'store/product/category.html', {'product': product, 'cart_product_form': cart_product_form})
 
-
-def product_search(request):
-    form = SearchForm()
-    query = None
-    results = []
-    if 'query' in request.GET:
-        form = SearchForm(request.GET)
-        if form.is_valid():
-            query = form.cleaned_data['query']
-            results = Product.objects.annotate(
-                search=SearchVector('name', 'description'),).filter(search=query)
-    return render(request, 'store/product/search_products.html', {'query': query, 'results': results})
 
 # def category_list(request, category_slug):
 #     categories = get_object_or_404(Category, slug=category_slug)

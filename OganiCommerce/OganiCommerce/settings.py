@@ -30,6 +30,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'store.apps.StoreConfig',
     'cart.apps.CartConfig',
+    'search.apps.SearchConfig',
     'orders.apps.OrdersConfig',
     'django.contrib.postgres',
 ]
