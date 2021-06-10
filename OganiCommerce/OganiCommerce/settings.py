@@ -73,9 +73,9 @@ WSGI_APPLICATION = 'OganiCommerce.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'oganicommerce',
-        'USER': 'postgres',
-        'PASSWORD': 'kwekukwekubolo92'
+        'NAME': '',
+        'USER': '',
+        'PASSWORD': ''
     }
 }
 
